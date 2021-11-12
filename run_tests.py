@@ -227,6 +227,10 @@ elif test_name == 'ex_158':
   os.system('python3 main.py --builddir %s --outdir ../ex_158 --mesh example/158/csg_high_res.off --eps 0.1 --surfacedensity 250 --volumedensity 25' % build_dir)
 elif test_name == 'ex_159':
   os.system('python3 main.py --builddir %s --outdir ../ex_159 --mesh example/159/csg_high_res.off --eps 0.025 --surfacedensity 250 --volumedensity 25' % build_dir)
+elif test_name == 'my0':
+  os.system('python3 main.py --builddir %s --outdir ../my0 --mesh example/0my0/fandisk.off --eps 0.1 --surfacedensity 250 --volumedensity 25' % build_dir)
+elif test_name == 'my1':
+  os.system('python3 main.py --builddir %s --outdir ../my1 --mesh example/0my1/block.off --eps 0.1 --surfacedensity 250 --volumedensity 25' % build_dir)
 else:
   print('Unknown test case: %s' % test_name)
   sys.exit(-1)

@@ -236,10 +236,10 @@ def main():
       helper.Run('python3 -m pip install -U scikit-learn')
     
     # Install CGAL.
-    InstallCGAL(build_folder, args.eigen)
+    InstallCGAL(build_folder, args.cgal)
     
     # Install Eigen-3.3.4.
-    InstallEigen(root_folder, args.cgal)
+    InstallEigen(root_folder, args.eigen)
     
     # Compile cpp.
     cpp_build_folder = os.path.join(build_folder, 'cpp')

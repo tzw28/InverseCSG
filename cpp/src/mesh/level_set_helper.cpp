@@ -61,8 +61,8 @@ void LevelSetHelper::ComputeLevelSet(const TriMesh& shape,
   // Compute close_grid_idx_.
   close_grid_idx_.clear();
   for (int i = 0; i < shape.NumOfFaces(); ++i) {
-    const Eigen::Matrix3d triangle = shape.Triangle(i);
-    const Eigen::Vector3d t_min = triangle.rowwise().minCoeff(),
+    const Eigen::Matrix3d triangle = shape.Triangle(i); // 3*3 坐标
+    const Eigen::Vector3d t_min = triangle.rowwise().minCoeff(), // 返回列中的最小值
       t_max = triangle.rowwise().maxCoeff();
     const Eigen::Vector3i t_min_idx = ClampGridIdx(
       PointToGridIdx(t_min).array() - 2);
